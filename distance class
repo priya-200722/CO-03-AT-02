@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+class Distance{
+    int m, cm;
+public:
+    Distance(int x=0,int y=0){
+        m=x;
+        cm=y;
+    }
+
+    Distance operator +(Distance d){
+        return Distance(m+d.m, cm+d.cm);
+    }
+
+    void display(){
+        cout<<m<<" m "<<cm<<" cm";
+    }
+};
+
+int main(){
+    Distance d1(2,30), d2(1,40);
+    Distance d3=d1+d2;
+
+    d3.display();
+}
