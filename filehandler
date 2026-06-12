@@ -1,0 +1,21 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+class FileHandler{
+    ofstream file;
+public:
+    FileHandler(){
+        file.open("data.txt");
+        cout<<"File opened\n";
+    }
+
+    ~FileHandler(){
+        file.close();
+        cout<<"File closed\n";
+    }
+};
+
+int main(){
+    FileHandler f;
+}
